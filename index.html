@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Daniel Graf</title>
+    <meta name="description" content="A random project I'm working on which will
+    hopefully help me visualize the lyric writing process.">
+    <meta name="keywords" content="Daniel Graf,lyrics,assistant">
+    <meta name="author" content="Daniel Graf">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script rel="text/javascript" src="js/materialize.js"></script>
+    <script src="https://use.fontawesome.com/ededb13e1f.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="titleContainer">
+        <div class="title">
+          <h1>
+            <div  class="firstName">
+              <a href="http://www.danielwgraf.com" class="fullWord">
+                <span class="customFirstLetter">D</span>aniel <span class="customFirstLetter">G</span>raf
+              </a>
+
+              <span class="subtitle">
+                <span class="customFirstLetter">L</span>yric <span class="customFirstLetter">A</span>ssistant
+              </span>
+              <!-- <span class="fullWord">
+                <span class="customFirstLetter">G</span>raf
+              </span> -->
+            </div>
+            <!-- <div class="lastName">
+              <span class="fullWord">
+                <span class="customFirstLetter">G</span>raf
+              </span>
+            </div> -->
+          </h1>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="left-content">
+
+        <textarea id="lyricsInput" class="lyricInput" name="name" rows="8" cols="80"></textarea>
+        <div class="buttons">
+          <button id="clearLyrics" class="button resetButton">Clear</button>
+          <!-- <button id="resetLyrics" class="button resetButton">Reset</button> -->
+          <button id="submitLyrics" class="button submitButton">Submit</button>
+        </div>
+      </div>
+      <div id="lyricsOutput" class="right-content">
+        Your Lyrics here
+      </div>
+    </div>
+
+    <!-- <footer class="footer">
+      <div class="links">
+        <ul class="icons">
+          <li>
+            <a href="mailto:danielgraf.developer@gmail.com?Subject=Contact%20from%Website" class="icon">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/danielwgraf" class="icon" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/daniel-w-graf/" class="icon" target="_blank">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.danielwgraf.com/Resume" class="icon">
+              <i class="fa fa-file-text"></i>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </footer> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+// @import "materialize/materialize";
+// @import "styles/footer";
+
+
+html {
+  height: 100%;
+}
+body {
+  background-color: rgb(82, 86, 89);
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.content {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  flex-wrap: wrap;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    flex: 1 0 100%;
+  }
+  // div:first-child {
+  //   flex: 1 0 100%;
+  //   display: flex;
+  //   justify-content: left;
+  //   align-items: center;
+  // }
+  .left-content {
+    flex: 1;
+    width: 30%;
+  }
+  .right-content {
+    flex: 1;
+    width: 60%;
+  }
+}
+
+.titleContainer {
+  display: inline-block;
+  padding-left: 5%;
+  margin-top: 2.5%;
+  // margin-top: -50px;
+  @media screen and (max-width: 600px) {
+    padding-left: 2.5%;
+    // margin-top: 50px;
+  }
+}
+
+.title {
+  font-family: 'Cutive', serif;
+  flex: 1 0 30%;
+  // width: 30%;
+  // padding-top: 10%;
+  // -ms-transform: rotate(-20deg); /* IE 9 */
+  //   -webkit-transform: rotate(-20deg); /* Safari */
+  //   transform: rotate(-20deg); /* Standard syntax */
+}
+
+.lyricWord:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lyricWord:nth-child(even) {
+  &:hover {
+    color: #008AFF;
+  }
+}
+
+.lyricWord:nth-child(odd) {
+  &:hover {
+    color: #008AFF;
+  }
+}
+
+.lineContainer {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-areas: "s l"
+}
+
+.lineLyrics {
+  grid-area: l;
+}
+
+.lineCount {
+  grid-area: s
+}
+
+.title h1 {
+  // font-size: 70pt;
+  // line-height: 1.6;
+  // @media screen and (max-width: 600px) {
+  //   font-size: 50pt;
+  // }
+  color: white;
+  .fullWord {
+    text-decoration: none;
+    color: white;
+    .customFirstLetter {
+      color: #008AFF;
+      // animation: colorChange 1.5s ease;
+    }
+    padding-top: 3%; /* Fixes the top of the custom font */
+    // display: block;
+    // overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(82, 86, 89); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em; /* Adjust as needed */
+  }
+
+  .subtitle {
+    margin-left: 1%;
+    .customFirstLetter {
+      // color: #008AFF;
+      // animation: colorChange 1.5s ease;
+    }
+  }
+}
+//
+.firstName {
+  .fullWord {
+    animation:
+      // fail-typing 1.5s steps(10, end),
+      // typing .75s steps(15, end) 1.5s,
+      blink-caret .75s infinite;
+  }
+}
+
+.lyricInput {
+  caret-color: #008AFF;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  margin: 0 10px;
+  text-align: center;
+  width: auto;
+  height:25px;
+  border: none;
+  border-radius: 5%;
+}
+
+.submitButton {
+  background-color: #008AFF;
+  color: black;
+}
+
+.resetButton {
+  background-color: #EEEEEE;
+  color: black;
+}
+
+// .lastName {
+//   width: 90%;
+//   .fullWord {
+//     padding-left: 70px;
+//     @media screen and (max-width: 600px) {
+//       width: 90%;
+//       padding-left: 30px;
+//     }
+//     visibility: hidden;
+//     animation:
+//       last-typing .75s steps(15, end) 2.25s,
+//       blink-caret .75s step-end 2.25s infinite;
+//   }
+// }
+
+/* The typing effect */
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  99% {
+    color: white;
+  }
+  100% {
+    color: #008AFF;
+  }
+}
+
+@keyframes fail-typing {
+  0% {
+    width: 1%
+  }
+  30% {
+    width: 61%
+  }
+  70% {
+    width: 61%
+  }
+  100% {
+    color: white !important;
+    width: 1%
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 1%
+  }
+  100% {
+    width: 100%
+  }
+}
+
+@keyframes last-typing {
+  0% {
+    width: 0
+  }
+  100% {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+    visibility: visible;
+  }
+  50% { border-color: #008AFF; }
+}
+
+.myBlue {
+  &.background {
+    background-color: #008AFF;
+  }
+  &.text {
+    background-color: #008AFF;
+  }
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+p {
+    font-family: 'Futura', "Trebuchet MS", 'Arial', 'sans-serif';
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font: 16px Sans-Serif;
+}
+h1 {
+  margin: 0 0 20px 0;
+  color: #008AFF;
+}
+p {
+  margin: 0 0 20px 0;
+}
